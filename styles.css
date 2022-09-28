@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Libre Baskerville';
+  --ff-secondary:'Source Sans Pro', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 900;
+
+  --clr-light: whitesmoke;
+  --clr-dark: #102a48;
+  --clr-accent: #D36582;
+
+  --fs-title: 2.5rem;
+  --fs-subtitle: 1.25rem;
+  --fs-body: 1em;
+}
+
+body {
+  background-color: #102a48;
+  min-width: 10em;
+  max-width: 40em;
+  width: 70%;
+  margin: auto;
+}
+
+/* ===HEADER=== */
+
+h1 {
+  color: var(--clr-light);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+  margin: 0.5em 0 0 0;
+}
+
+p {
+  color: var(--clr-light);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-regular);
+  line-height: 1.1;
+  margin: 0 0 1em 0;
+}
+
+/* ===SURVEY FORM=== */
+
+form {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  padding: 1.5em;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-body);
+}
+
+label,
+select {
+  display: block;
+  margin-bottom: 0.5em;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-body);
+}
+
+.textbox {
+  display: block;
+  width: 50%;
+  max-width: 15rem;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-body);
+}
+
+textarea.textbox {
+  width: inherit;
+}
+
+div {
+  background-color: var(--clr-accent);
+  width: 100%;
+  padding: 0.1rem;
+  margin: 1em 0;
+}
