@@ -17,45 +17,52 @@
       <form id="survey-form">
         <!-- ===PERSONAL INFO=== -->
         <label for="name" id="name-label" class="prompt" >Name: 
-        <input id="name" name="name" type="text" required placeholder="Enter your name" class="textbox"/></label>
+          <input id="name" name="name" type="text" required placeholder="Enter your name." class="textbox"/></label>
         <label for="email" id="email-label" class="prompt" >Email: 
-        <input id="email" name="email" type="email" required placeholder="Enter your Email" class="textbox" /></label>
+          <input id="email" name="email" type="email" required placeholder="Enter your email." class="textbox" /></label>
         <label for="age" id="number-label" class="prompt" >Age: 
-        <input id="number" type="number" min="0" max="100" placeholder="Age" class="textbox" /></label>
+          <input id="number" type="number" min="0" max="100" placeholder="Enter your age." class="textbox" /></label>
 
         <div></div>
 
         <!-- ===EXPANSION=== -->
-        <label for="endwalker" id="endwalker-label" class="prompt" >Have you completed the Endwalker expansion?</label>
-        <label for="yes"><input id="yes" type="radio" value="yes" name="endwalker" /> Yes</label>
-        <label for="no"><input id="no" type="radio" value="no" name="endwalker" /> No</label>
+        <label for="endwalker" id="endwalker-label" class="prompt">Have you completed the Endwalker expansion?</label>
+        <label for="yes">
+          <input id="yes" type="radio" value="yes" name="endwalker" required/> Yes</label>
+        <label for="no">
+          <input id="no" type="radio" value="no" name="endwalker" /> No</label>
 
         <!-- add script below for question to appear ONLY if the user chose yes on the endwalker question -->
         <label for="expansion" id="expansion-label" class="prompt">Which expansion did you like the most?
-        <select id="dropdown">
-        <option>A Realm Reborn</option>
-        <option>Heavensward</option>
-        <option>Stormblood</option>
-        <option>Shadowbringers</option>
-        <option>Endwalker</option>
-        <option>Unsure</option>
-        </select>
+          <select id="dropdown" required>
+          <option>A Realm Reborn</option>
+          <option>Heavensward</option>
+          <option>Stormblood</option>
+          <option>Shadowbringers</option>
+          <option>Endwalker</option>
+          <option>Unsure</option>
+          </select>
         </label>
 
         <!-- add script below if expac is selected -->
         <label for="expansion-desc" id="expansion-desc-label" class="prompt">What made that expansion stand out to you compared to the other expansions?</label>
-        <textarea placeholder="Enter your explanation." class="textbox"></textarea>
+        <textarea placeholder="Enter your explanation." class="textbox" ></textarea>
         <!-- end scripts -->
         
         <div></div>
 
         <!-- ===CLASSES=== -->
         <label for="class" id="class-label" class="prompt">Which class roles do you regularly play as?</label>
-        <label for="tank"><input value ="tank" id="tank" name="tank" type="checkbox" /> Tank</label>
-        <label for="melee"><input value ="melee" id="melee" name="melee" type="checkbox" /> Melee DPS</label>
-        <label for="physical"><input value ="physical" id="physical" name="physical" type="checkbox" /> Physical Ranged DPS</label>
-        <label for="magical"><input value ="magical" id="magical" name="magical" type="checkbox" /> Magical Ranged DPS</label>
-        <label for="healer"><input value ="healer" id="healer" name="healer" type="checkbox" /> Healer</label>
+        <label for="tank">
+          <input value ="tank" id="tank" name="tank" type="checkbox" required/> Tank</label>
+        <label for="melee">
+          <input value ="melee" id="melee" name="melee" type="checkbox" /> Melee DPS</label>
+        <label for="physical">
+          <input value ="physical" id="physical" name="physical" type="checkbox" /> Physical Ranged DPS</label>
+        <label for="magical">
+          <input value ="magical" id="magical" name="magical" type="checkbox" /> Magical Ranged DPS</label>
+        <label for="healer">
+          <input value ="healer" id="healer" name="healer" type="checkbox" /> Healer</label>
 
         <div></div>
 

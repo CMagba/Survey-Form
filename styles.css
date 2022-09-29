@@ -3,11 +3,14 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* variables */
 :root {
-  --ff-primary: 'Libre Baskerville';
+  --ff-primary: 'Libre Baskerville', serif;
   --ff-secondary:'Source Sans Pro', sans-serif;
 
   --fw-regular: 400;
@@ -17,8 +20,8 @@
   --clr-dark: #102a48;
   --clr-accent: #D36582;
 
-  --fs-title: 2.5rem;
-  --fs-subtitle: 1.25rem;
+  --fs-title: 2.5em;
+  --fs-subtitle: 1.25em;
   --fs-body: 1em;
 }
 
@@ -26,7 +29,7 @@ body {
   background-color: #102a48;
   min-width: 10em;
   max-width: 40em;
-  width: 70%;
+  width: 70vw;
   margin: auto;
 }
 
@@ -39,6 +42,7 @@ h1 {
   font-weight: var(--fw-bold);
   line-height: 1.5;
   margin: 0.5em 0 0 0;
+  text-align: center;
 }
 
 p {
@@ -48,41 +52,72 @@ p {
   font-weight: var(--fw-regular);
   line-height: 1.1;
   margin: 0 0 1em 0;
+  text-align: center;
 }
 
 /* ===SURVEY FORM=== */
 
 form {
   background-color: var(--clr-light);
+  border-radius: 2em;
   color: var(--clr-dark);
-  padding: 1.5em;
   font-family: var(--ff-secondary);
   font-size: var(--fs-body);
+  padding: 1.5em;
 }
 
 label,
 select {
   display: block;
-  margin-bottom: 0.5em;
   font-family: var(--ff-secondary);
   font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  margin-bottom: 0.5em;
 }
 
 .textbox {
   display: block;
-  width: 50%;
-  max-width: 15rem;
   font-family: var(--ff-secondary);
   font-size: var(--fs-body);
+  min-width: 12em;
+  max-width: 15em;
+  width: 25vw;
 }
 
 textarea.textbox {
-  width: inherit;
+  height: 6em;
+  max-width: 33em;
+  width: 60vw;
 }
 
 div {
   background-color: var(--clr-accent);
-  width: 100%;
-  padding: 0.1rem;
   margin: 1em 0;
+  padding: 0.1em;
+  width: inherit;
+}
+
+button {
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: 1em;
+  color: var(--clr-light);
+  display: block;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-body);
+  margin: 0 auto;
+  padding: 0.2em;
+  width: 5em;
+}
+
+button:hover {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  transition: 0.3s;
+}
+
+button:active {
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
+  transition: 0.3s;
 }
