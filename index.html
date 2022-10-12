@@ -26,28 +26,27 @@
         <div></div>
 
         <!-- ===EXPANSION=== -->
-        <label for="endwalker" id="endwalker-label" class="prompt">Have you completed the Endwalker expansion?</label>
+        <label for="endwalker" id="endwalker-label" class="prompt" >Have you completed the Endwalker expansion?</label>
         <label for="yes">
-          <input id="yes" type="radio" value="yes" name="endwalker" required/> Yes</label>
+          <input id="yes" type="radio" value="yes" name="endwalker" onchange='selectDisplay()' required/> Yes</label>
         <label for="no">
-          <input id="no" type="radio" value="no" name="endwalker" /> No</label>
+          <input id="no" type="radio" value="no" name="endwalker" onchange='selectDisplay()' /> No</label>
 
         <!-- add script below for question to appear ONLY if the user chose yes on the endwalker question -->
         <label for="expansion" id="expansion-label" class="prompt">Which expansion did you like the most?
-          <select id="dropdown" required>
-          <option>A Realm Reborn</option>
-          <option>Heavensward</option>
-          <option>Stormblood</option>
-          <option>Shadowbringers</option>
-          <option>Endwalker</option>
-          <option>Unsure</option>
+          <select id="dropdown" onchange='textboxDisplay(this)' required>
+          <option value="None">Select an expansion</option>
+          <option value="ARR">A Realm Reborn</option>
+          <option value="HW">Heavensward</option>
+          <option value="SB">Stormblood</option>
+          <option value="ShB">Shadowbringers</option>
+          <option value="EW">Endwalker</option>
+          <option value="Unsure">Unsure</option>
           </select>
         </label>
 
-        <!-- add script below if expac is selected -->
-        <label for="expansion-desc" id="expansion-desc-label" class="prompt">What made that expansion stand out to you compared to the other expansions?</label>
-        <textarea placeholder="Enter your explanation." class="textbox" ></textarea>
-        <!-- end scripts -->
+        <label for="expansion-desc" id="expansion-desc-label" class="prompt">What made that expansion stand out to you compared to the other expansions?
+        <textarea placeholder="Enter your explanation." class="textbox" ></textarea></label>
         
         <div></div>
 
@@ -69,5 +68,6 @@
         <button id="submit" type="submit">Submit</button>
       </form>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

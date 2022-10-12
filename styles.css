@@ -75,6 +75,10 @@ select {
   margin-bottom: 0.5em;
 }
 
+input {
+  accent-color: var(--clr-accent);
+}
+
 .textbox {
   display: block;
   font-family: var(--ff-secondary);
@@ -91,7 +95,7 @@ textarea.textbox {
 }
 
 div {
-  background-color: var(--clr-accent);
+  background-color: var(--clr-dark);
   margin: 1em 0;
   padding: 0.1em;
   width: inherit;
@@ -113,11 +117,20 @@ button {
 button:hover {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 button:active {
   background-color: var(--clr-dark);
-  color: var(--clr-accent);
-  transition: 0.3s;
+  color: var(--clr-white);
+  filter: blur(1px);
+  transition: 0.2s;
+}
+
+#expansion-label {
+  display: none;
+}
+
+#expansion-desc-label {
+  display: none;
 }
